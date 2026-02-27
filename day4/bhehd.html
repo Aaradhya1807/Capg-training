@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="count">0</h1>
+    <button id="plus">+</button>
+    <button id="minus">-</button>
+    <button id="reset">Reset</button>
+    <script>
+        let count = document.getElementById("count");
+        let plus = document.getElementById("plus");
+        let minus = document.getElementById("minus");
+        let reset = document.getElementById("reset");
+        let countValue = 0;
+
+        plus.onclick = function() {
+            countValue++;
+            count.textContent = countValue;
+        }
+
+        minus.onclick = function() {
+            countValue--;
+            count.textContent = countValue;
+        }
+
+        reset.onclick = function() {
+            countValue = 0;
+            count.textContent = countValue;
+        }
+    </script>
+</body>
+</html>

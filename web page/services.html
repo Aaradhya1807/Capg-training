@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PraRoz - Our Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: #fff;
+      min-height: 100vh;
+      background: url("https://m.gettywallpapers.com/wp-content/uploads/2022/06/Thomas-Shelby-PC-Wallpaper.jpg") center/cover no-repeat fixed;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 8, 20, 0.82);
+      z-index: 0;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      position: relative;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 50px;
+    }
+
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: #ff6b00;
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    .logo-dot {
+      width: 10px; height: 10px;
+      background: #ff6b00;
+      border-radius: 50%;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 35px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .nav-links a:hover { color: #ff6b00; }
+
+    .btn-back {
+      padding: 8px 20px;
+      background: transparent;
+      border: 1px solid #ff6b00;
+      color: #ff6b00;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-back:hover {
+      background: #ff6b00;
+      color: #fff;
+    }
+
+    /* PAGE CONTENT */
+    .page-content {
+      position: relative;
+      z-index: 1;
+      padding: 60px 50px;
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .page-header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 800;
+    }
+
+    .page-header h1 span { color: #ff6b00; }
+
+    .page-header p {
+      margin-top: 14px;
+      font-size: 0.9rem;
+      color: #aaa;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .divider {
+      width: 60px;
+      height: 3px;
+      background: #ff6b00;
+      margin: 20px auto 0;
+    }
+
+    /* SERVICES GRID */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      background: rgba(15, 20, 35, 0.88);
+      border: 1px solid rgba(255, 107, 0, 0.15);
+      border-top: 3px solid #ff6b00;
+      padding: 36px 28px;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      cursor: default;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(255, 107, 0, 0.5);
+      box-shadow: 0 12px 40px rgba(255, 107, 0, 0.12);
+    }
+
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(255, 107, 0, 0.12);
+      border: 1px solid rgba(255, 107, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .service-icon i {
+      font-size: 1.4rem;
+      color: #ff6b00;
+    }
+
+    .service-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    .service-card p {
+      font-size: 0.82rem;
+      color: #aaa;
+      line-height: 1.7;
+    }
+
+    .service-card .learn-more {
+      display: inline-block;
+      margin-top: 20px;
+      color: #ff6b00;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .service-card .learn-more:hover {
+      border-color: #ff6b00;
+    }
+
+    .learn-more i {
+      margin-left: 6px;
+      font-size: 0.65rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">PraRoz<span class="logo-dot"></span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="#">ABOUT</a></li>
+      <li><a href="services.html" style="color:#ff6b00">SERVICE</a></li>
+      <li><a href="#">DESIGN</a></li>
+      <li><a href="#">CONTACT</a></li>
+    </ul>
+    <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> &nbsp;BACK</a>
+  </nav>
+
+  <!-- PAGE CONTENT -->
+  <div class="page-content">
+
+    <div class="page-header">
+      <h1>Our <span>Services</span></h1>
+      <p>We provide top-notch web solutions tailored to your needs. Here's what we offer.</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+        <h3>WEB DESIGN</h3>
+        <p>Beautiful, modern UI/UX design tailored to your brand. From wireframes to pixel-perfect interfaces that captivate your audience.</p>
+        <a href="#" class="learn-more">LEARN MORE <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-code"></i></div>
+        <h3>DEVELOPMENT</h3>
+        <p>Full-stack web development using the latest technologies. Clean, scalable, and performant code delivered on time.</p>
+        <a href="#" class="learn-more">LEARN MORE <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-search"></i></div>
+        <h3>SEO OPTIMIZATION</h3>
+        <p>Rank higher on search engines with our proven SEO strategies. Drive organic traffic and grow your online presence.</p>
+        <a href="#" class="learn-more">LEARN MORE <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+        <h3>MOBILE APPS</h3>
+        <p>Cross-platform mobile applications for iOS and Android. Seamless user experiences built with cutting-edge frameworks.</p>
+        <a href="#" class="learn-more">LEARN MORE <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

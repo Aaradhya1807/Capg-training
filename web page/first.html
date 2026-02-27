@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PraRoz - Web Design & Development Course</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      PraRoz<span class="logo-dot"></span>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">ABOUT</a></li>
+
+      <!-- SERVICE with Dropdown -->
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">SERVICE <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="services.html"><i class="fas fa-paint-brush"></i> Web Design</a></li>
+          <li><a href="services.html"><i class="fas fa-code"></i> Development</a></li>
+          <li><a href="services.html"><i class="fas fa-search"></i> SEO Optimization</a></li>
+          <li><a href="services.html"><i class="fas fa-mobile-alt"></i> Mobile Apps</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#">DESIGN</a></li>
+      <li><a href="#">CONTACT</a></li>
+    </ul>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Type to Search">
+      <button>Search</button>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+
+    <div class="hero-content">
+      <h1 class="hero-title">
+        Web Design &amp;<br>
+        <span class="highlight">Development</span><br>
+        Course
+      </h1>
+      <p class="hero-desc">
+        Web Design is a specialisation of the design stream. They also use HTML,
+        CSS, WYSIWYG editing software, mark up validators etc.,
+        to create design elements.
+      </p>
+      <button class="btn-join">JOIN US</button>
+    </div>
+
+    <!-- Login Card -->
+    <div class="login-card">
+      <h2 class="login-title">Login Here</h2>
+      <div class="input-group">
+        <input type="email" placeholder="Enter Email Here">
+      </div>
+      <div class="input-group">
+        <input type="password" placeholder="Enter Password Here">
+      </div>
+      <button class="btn-login">Login</button>
+      <p class="signup-text">
+        Don't have an account?<br>
+        <a href="#">Sign up</a> here
+      </p>
+      <p class="login-with">Log in with</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-google"></i></a>
+        <a href="#"><i class="fab fa-skype"></i></a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
