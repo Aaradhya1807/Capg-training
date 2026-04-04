@@ -105,6 +105,42 @@ test("task1",async({request})=>{
     expect(r6.status()).toBe(200);
     const data6=await r6.json();
     console.log(data6.additionalneeds);
+
+
+
+    //!Partial Update Booking
+
+const r7 = await request.patch(`${dataFile.baseUrl}/booking/${bookingid}`, {
+    headers: {
+        "Cookie": `token=${token}`,
+        "Content-Type": "application/json"
+    },
+    data: {
+        "firstname": "Dadda"
+    },
+    ignoreHTTPSErrors: true
+});
+
+expect(r7.status()).toBe(200);
+const data7 = await r7.json();
+console.log(data7);
+expect(data7.firstname).toBe("Dadda");
+
+
+
+//!Delete Booking
+
+const r8 = await request.delete(`${dataFile.baseUrl}/booking/${bookingid}`, {
+    headers: {
+        "Cookie": `token=${token}`
+    },
+    ignoreHTTPSErrors: true
+});
+
+expect(r8.status()).toBe(201);
+console.log("Booking Deleted");
+
+
     
     
 })
